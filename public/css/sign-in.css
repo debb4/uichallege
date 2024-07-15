@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+
+--primary-color: #583046;
+--secondary-color: #a44c53;
+--thrid-color: #c45658;
+--salem-1: #ec7265;
+--salem-2: #f78d74;
+--salem-3: #9D4F53;
+--grey: #9d969c;
+--dark-purple1: #272246;
+--dark-purple2: #251535;
+--dark-purple3: #672F45;
+--light-purple-1: #d29ea3;
+--light-purple-2: #e7d1d4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'sans-serif';
+}
+
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+.background::before{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top right, var(--dark-purple1) 25%, var(--salem-3) 60%);
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    filter: blur(5px);
+}
+
+.container-form{
+    z-index: 1;
+    background-color: #9d969c;
+    width: 78vw;
+    height: 80vb;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi container menjadi dua kolom */
+    /* gap: 20px; */
+    /* untuk menengahkan container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%,-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Menghindari overflow dari gambar */
+    }
+
+.aside-left{
+    position: relative; /* Menetapkan posisi relatif untuk aside */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 132%;
+    overflow: hidden;
+}
+.aside-left::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: linear-gradient(to top right, var(--dark-purple2) 25%, var(--dark-purple3) 70%);
+    z-index: 0; /* Pastikan elemen pseudo berada di bawah konten lainya */
+    filter: blur(30px);
+}
+.aside-left img{
+    width: 100%; /* Mengisi lebar gambar sesuai dengan container */
+    max-width: 100%; /* Pastikan gambar tidak melebihi lebar container */
+    height: 87%; /* Biarkan tinggi gambar menyesuaikan proporsional */
+    position: relative;
+    top: -20px;
+    left: -7px;
+}
+
+.aside-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    background: linear-gradient(to top right, var(--dark-purple3)3%, var(--salem-1)); /* Latar belakang gradient */
+    z-index: 1; /* Pastikan aside-right berada di atas elemen lainnya */
+}
+
+
+.inside-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 100px;
+    flex-direction: column;
+}
+
+.inside-form .data-input input{
+display: block;
+width: 400px;
+margin-bottom: 20px;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: 1px solid #fff;
+text-decoration: none;
+background: none;
+padding: 10px 0 ;
+}
+
+.data-input input::placeholder{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+.btn-form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 100%;
+}
+.btn-form .btn-signin{
+    padding: 10px;
+    width: 180px;
+    height: 55px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.btn-form .btn-signin:hover{
+    background-color: var(--dark-purple3);
+    color: var(--salem-1);
+    border: 1px solid var(--salem-1);
+
+}
+.btn-form .btn-signup{
+    padding: 10px;
+    width: 180px;
+    height: 55px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.btn-form .btn-signup:hover{
+    background-color: var(--dark-purple3);
+    color: var(--salem-1);
+    border: 1px solid var(--salem-1);
+
+}
+.inside-form a{
+    color: #fff;
+    margin-top: 100px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
